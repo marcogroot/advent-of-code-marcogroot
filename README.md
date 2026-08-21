@@ -8,18 +8,26 @@ Puzzle inputs (`*.txt`) are deliberately not committed.
 
 ## Progress
 
-**129 / 224 stars**
+**132 / 524 stars** · 2025 complete ✅
 
-From 2025 onwards Advent of Code runs for 12 days rather than 25, so that year is out of 24
-stars instead of 50.
+Advent of Code has run every December since 2015. From 2025 onwards it runs for 12 days
+rather than 25, so that year is out of 24 stars instead of 50.
 
 | Year | Language | Days | Stars | Progress |
 | ---- | -------- | ---- | ----- | -------- |
+| 2015 | — | 0 / 25 | 0 / 50 | `░░░░░░░░░░░░░░░░░░░░` 0% |
+| 2016 | — | 0 / 25 | 0 / 50 | `░░░░░░░░░░░░░░░░░░░░` 0% |
+| 2017 | — | 0 / 25 | 0 / 50 | `░░░░░░░░░░░░░░░░░░░░` 0% |
+| 2018 | — | 0 / 25 | 0 / 50 | `░░░░░░░░░░░░░░░░░░░░` 0% |
 | [2019](2019) | Rust | 5 / 25 | 10 / 50 | `████░░░░░░░░░░░░░░░░` 20% |
 | [2020](2020) | Java | 10 / 25 | 20 / 50 | `████████░░░░░░░░░░░░` 40% |
+| 2021 | — | 0 / 25 | 0 / 50 | `░░░░░░░░░░░░░░░░░░░░` 0% |
+| 2022 | — | 0 / 25 | 0 / 50 | `░░░░░░░░░░░░░░░░░░░░` 0% |
 | [2023](2023) | Kotlin | 23 / 25 | 46 / 50 | `██████████████████░░` 92% |
 | [2024](2024) | C++ | 16 / 25 | 32 / 50 | `████████████░░░░░░░░` 64% |
-| [2025](2025) | Kotlin (scripts) | 10.5 / 12 | 21 / 24 | `█████████████████░░░` 88% |
+| [2025](2025) | Kotlin (scripts) | 12 / 12 | 24 / 24 | `████████████████████` 100% |
+
+Years without a link have not been started — no folder for them yet.
 
 ### Stars by day
 
@@ -27,13 +35,21 @@ stars instead of 50.
 
 | Year | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 | ---- |---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| 2015 |··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
+| 2016 |··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
+| 2017 |··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
+| 2018 |··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
 | 2019 |★★|★★|★★|★★|★★|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
 | 2020 |★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
+| 2021 |··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
+| 2022 |··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|··|
 | 2023 |★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|··|··|
 | 2024 |★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|··|··|··|··|··|··|··|··|··|
-| 2025 |··|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★·|   |   |   |   |   |   |   |   |   |   |   |   |   |
+| 2025 |★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|★★|   |   |   |   |   |   |   |   |   |   |   |   |   |
 
 ## The years
+
+Not started yet: **2015**, **2016**, **2017**, **2018**, **2021**, **2022**.
 
 ### [2019](2019) — Rust
 
@@ -75,11 +91,17 @@ cd 2024 && g++ -std=c++20 1_1.cpp util.cpp -o day1_1 && ./day1_1
 
 ### [2025](2025) — Kotlin scripts
 
-The first 12-day year. Standalone `.kts` scripts named `<day>_<part>.kts`, run directly with
-the Kotlin compiler. Day 10 part 2 needs `ojalgo-56.2.1.jar` (bundled here) on the classpath.
+The first 12-day year, and a full clear — all 24 stars. Standalone `.kts` scripts named
+`<day>_<part>.kts`, run directly with the Kotlin compiler. Day 10 part 2 needs
+`ojalgo-56.2.1.jar` (bundled here) on the classpath.
 
 ```bash
 cd 2025 && kotlinc -script 2_1.kts
 ```
 
-Day 1 was never committed to the original repository, so it is missing here too.
+Two gaps in the source, both accounted for:
+
+- **Day 1** was solved at the time but the scripts were lost before they were ever committed.
+  `1_1.kts` and `1_2.kts` are placeholders, not the original solutions.
+- **Day 12 part 2** has no script because it needs none — the final puzzle's second star
+  unlocks automatically once every other star for the year has been collected.
