@@ -1,0 +1,25 @@
+# Puzzle inputs are not committed
+*.txt
+
+# Java
+*.class
+/2020/bin/
+
+# Rust
+target/
+
+# Gradle / Kotlin
+.gradle/
+build/
+
+# C++
+*.out
+a.out.dSYM/
+
+# Editors / OS
+.idea/
+.claude/
+.DS_Store
+
+# Rust puts per-part binaries in src/bin/ (re-include: global gitignore has **/bin/)
+!**/src/bin/
