@@ -70,13 +70,11 @@ public class Day12 {
     }
 
     public static Long part2(List<String> input) {
-        var dirs = List.of(new DirDiff(0, 1), // E
-                new DirDiff(1, 0), // S
+        var dirs = List.of(new DirDiff(1, 0), // E
+                new DirDiff(0, -1), // S
                 new DirDiff(-1, 0), // W
-                new DirDiff(0, -1) // N
+                new DirDiff(0, 1) // N
         );
-        var directionIndex = 0;
-
         var directionMap = Map.of(Dir.N, 3, Dir.W, 2, Dir.S, 1, Dir.E, 0);
 
         var instructions = input.stream().map(line -> {
@@ -89,35 +87,37 @@ public class Day12 {
         var r = 0;
         var c = 0;
 
+        var wayPointX = 10;
+        var wayPointY = 1;
+
+        var directionIndex = 0;
+
         for (var instruction : instructions) {
             var dir = instruction.dir();
             var mag = instruction.magnitude();
             switch (dir) {
                 case N, E, W, S -> {
                     var direction = dirs.get(directionMap.get(dir));
-                    r += direction.rDiff() * mag;
-                    c += direction.cDiff() * mag;
+                    wayPointX += direction.rDiff() * mag;
+                    wayPointY += direction.cDiff() * mag;
                 }
                 case L, R -> {
                     var turns = mag / 90;
 
-                    if (dir.equals(Dir.L)) {
-                        directionIndex -= turns;
-                    } else {
-                        directionIndex += turns;
-                    }
-
-                    if (directionIndex < 0) {
-                        directionIndex += 4;
-                    }
-                    if (directionIndex >= 4) {
-                        directionIndex -= 4;
+                    for (int i = 0; i < turns; i++) {
+                        int oldX = wayPointX;
+                        if (dir == Dir.R) {
+                            wayPointX = wayPointY;
+                            wayPointY = -oldX;
+                        } else {
+                            wayPointX = -wayPointY;
+                            wayPointY = oldX;
+                        }
                     }
                 }
                 case F -> {
-                    var direction = dirs.get(directionIndex);
-                    r += direction.rDiff() * mag;
-                    c += direction.cDiff() * mag;
+                    r += wayPointX * mag;
+                    c += wayPointY * mag;
                 }
             }
         }
