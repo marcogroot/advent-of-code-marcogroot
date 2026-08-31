@@ -67,11 +67,6 @@ public class Day13 {
         var previousBest = 0;
         var count = 0;
         while (true) {
-            System.out.println(step);
-            count++;
-            if (count % 10000000000L == 0) {
-                System.out.println("At t: " + t);
-            }
             var ret = true;
             // System.out.println(t);
             for (int i = 0; i < times.size(); i++) {
@@ -84,7 +79,7 @@ public class Day13 {
                         timeToWait = 0;
                     }
 
-                    if (timeToWait != i) {
+                    if ((t + i) % time != 0) {
                         // System.out.println("Is " + i + " was " + previousBest);
                         if (i > previousBest) {
                             for (int j = previousBest; j < i; j++) {
@@ -93,7 +88,7 @@ public class Day13 {
                                     step *= c;
                                 }
                             }
-                            // System.out.println("t: " + t + " step: " + step);
+                            System.out.println("t: " + t + " step: " + step);
                             previousBest = i;
                         }
                         ret = false;
